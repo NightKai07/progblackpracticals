@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width">
     <title>Styling lists</title>
     <style>
+
+      ul {
+        list-style-type: none; /* Turn off default bullets */
+        padding-left: 10px;
+      }
+
+      ul li {
+        font-family: 'Georgia', serif;
+        font-size: 1.1rem;
+        color: #333333;
+        margin-bottom: 12px;    /* Adds breathable spacing between rows */
+        position: relative;
+        padding-left: 30px;     /* Leaves space for the custom icon */
+      }
+
+      /* Inject an emoji as a pseudo-element bullet */
+      ul li::before {
+        content: "✨";          /* Switch this to any emoji (🚀, 🎯, 💻, etc.) */
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
       /* General styles */
 
       html {
